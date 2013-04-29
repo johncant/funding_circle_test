@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require 'funding_circle_test'
+require 'slop'
+
+DEFAULTS = {:n => 10, :f => 2}
+
+opts = Slop.parse(ARGV, :help => true) do
+  banner 'Usage: funding_circle_test_primes [options]'
+
+  on :n, "Number of primes to generate (Default: #{DEFAULTS[:n]})", :argument => true, :default => DEFAULTS[:n], :as => Integer
+  on :f, "Number of prime factors (Default: #{DEFAULTS[:f]})", :argument => true, :default => DEFAULTS[:f], :as => Integer
+end.to_hash
+
+if opts[:f] < 2
+  raise "Please use more than 2 factors"
+end
+
+if opts[:n] < 1
+  raise "Please use at least one prime number"
+end
+
+FundingCircleTest.print_primes(opts)
+
