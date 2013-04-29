@@ -1,29 +1,15 @@
-# FundingCircleTest
+FundingCircleTest
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'funding_circle_test'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install funding_circle_test
+[![Build
+Status](https://travis-ci.org/johncant/funding_circle_test.png)](https://travis-ci.org/johncant/funding_circle_test)
 
 ## Usage
 
-TODO: Write usage instructions here
+clone the git repo
+run bundler to install the gems
 
-## Contributing
+```
+bundle exec bin/funding_circle_test_primes # Solution to the problem.
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Pass --help to see available options
+
